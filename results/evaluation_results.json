@@ -2,7 +2,7 @@
   "accuracy": 0.8751969598665307,
   "total_samples": 21578,
   "correct": 18885,
-  "processing_time": 84.92488884925842,
+  "processing_time": 82.19265937805176,
   "class_metrics": {
     "collective_anomaly": {
       "precision": 0.8118668596237337,

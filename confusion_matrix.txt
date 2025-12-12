@@ -1,0 +1,124 @@
+
+======================================================================
+  TSFRESH ENSEMBLE EVALUATION
+======================================================================
+======================================================================
+  LOADING TSFRESH DETECTOR MODELS
+======================================================================
+  [OK] collective_anomaly (xgboost)
+  [OK] contextual_anomaly (xgboost)
+  [OK] deterministic_trend (xgboost)
+  [OK] mean_shift (xgboost)
+  [OK] point_anomaly (lightgbm)
+  [OK] stochastic_trend (xgboost)
+  [OK] trend_shift (xgboost)
+  [OK] variance_shift (xgboost)
+  [OK] volatility (xgboost)
+
+  Loaded 9/9 detectors
+======================================================================
+
+----------------------------------------------------------------------
+  LOADING TEST DATA
+----------------------------------------------------------------------
+  X_test: (21578, 777)
+  y_test: (21578,)
+  Classes: [0 1 2 3 4 5 6 7 8]
+    collective_anomaly: 2397 samples
+    contextual_anomaly: 2397 samples
+    deterministic_trend: 2397 samples
+    mean_shift: 2397 samples
+    point_anomaly: 2398 samples
+    stochastic_trend: 2398 samples
+    trend_shift: 2398 samples
+    variance_shift: 2398 samples
+    volatility: 2398 samples
+
+----------------------------------------------------------------------
+  RUNNING PREDICTIONS
+----------------------------------------------------------------------
+  Progress: 500/21578 (2.3%) | Rate: 259/sec | ETA: 82s
+  Progress: 1000/21578 (4.6%) | Rate: 262/sec | ETA: 78s
+  Progress: 1500/21578 (7.0%) | Rate: 263/sec | ETA: 76s
+  Progress: 2000/21578 (9.3%) | Rate: 261/sec | ETA: 75s
+  Progress: 2500/21578 (11.6%) | Rate: 262/sec | ETA: 73s
+  Progress: 3000/21578 (13.9%) | Rate: 261/sec | ETA: 71s
+  Progress: 3500/21578 (16.2%) | Rate: 261/sec | ETA: 69s
+  Progress: 4000/21578 (18.5%) | Rate: 261/sec | ETA: 67s
+  Progress: 4500/21578 (20.9%) | Rate: 260/sec | ETA: 66s
+  Progress: 5000/21578 (23.2%) | Rate: 261/sec | ETA: 64s
+  Progress: 5500/21578 (25.5%) | Rate: 261/sec | ETA: 62s
+  Progress: 6000/21578 (27.8%) | Rate: 261/sec | ETA: 60s
+  Progress: 6500/21578 (30.1%) | Rate: 261/sec | ETA: 58s
+  Progress: 7000/21578 (32.4%) | Rate: 260/sec | ETA: 56s
+  Progress: 7500/21578 (34.8%) | Rate: 259/sec | ETA: 54s
+  Progress: 8000/21578 (37.1%) | Rate: 259/sec | ETA: 52s
+  Progress: 8500/21578 (39.4%) | Rate: 259/sec | ETA: 50s
+  Progress: 9000/21578 (41.7%) | Rate: 260/sec | ETA: 48s
+  Progress: 9500/21578 (44.0%) | Rate: 260/sec | ETA: 46s
+  Progress: 10000/21578 (46.3%) | Rate: 260/sec | ETA: 44s
+  Progress: 10500/21578 (48.7%) | Rate: 261/sec | ETA: 42s
+  Progress: 11000/21578 (51.0%) | Rate: 261/sec | ETA: 41s
+  Progress: 11500/21578 (53.3%) | Rate: 261/sec | ETA: 39s
+  Progress: 12000/21578 (55.6%) | Rate: 261/sec | ETA: 37s
+  Progress: 12500/21578 (57.9%) | Rate: 262/sec | ETA: 35s
+  Progress: 13000/21578 (60.2%) | Rate: 262/sec | ETA: 33s
+  Progress: 13500/21578 (62.6%) | Rate: 262/sec | ETA: 31s
+  Progress: 14000/21578 (64.9%) | Rate: 262/sec | ETA: 29s
+  Progress: 14500/21578 (67.2%) | Rate: 262/sec | ETA: 27s
+  Progress: 15000/21578 (69.5%) | Rate: 262/sec | ETA: 25s
+  Progress: 15500/21578 (71.8%) | Rate: 262/sec | ETA: 23s
+  Progress: 16000/21578 (74.1%) | Rate: 263/sec | ETA: 21s
+  Progress: 16500/21578 (76.5%) | Rate: 263/sec | ETA: 19s
+  Progress: 17000/21578 (78.8%) | Rate: 263/sec | ETA: 17s
+  Progress: 17500/21578 (81.1%) | Rate: 263/sec | ETA: 16s
+  Progress: 18000/21578 (83.4%) | Rate: 263/sec | ETA: 14s
+  Progress: 18500/21578 (85.7%) | Rate: 263/sec | ETA: 12s
+  Progress: 19000/21578 (88.1%) | Rate: 263/sec | ETA: 10s
+  Progress: 19500/21578 (90.4%) | Rate: 262/sec | ETA: 8s
+  Progress: 20000/21578 (92.7%) | Rate: 262/sec | ETA: 6s
+  Progress: 20500/21578 (95.0%) | Rate: 262/sec | ETA: 4s
+  Progress: 21000/21578 (97.3%) | Rate: 263/sec | ETA: 2s
+  Progress: 21500/21578 (99.6%) | Rate: 263/sec | ETA: 0s
+  Progress: 21578/21578 (100.0%) | Rate: 263/sec
+
+======================================================================
+  RESULTS
+======================================================================
+
+  Overall Accuracy: 0.8752 (18885/21578)
+  Processing Time: 82.2s (263 samples/sec)
+
+----------------------------------------------------------------------
+  PER-CLASS METRICS
+----------------------------------------------------------------------
+
+  Class                      Precision     Recall         F1    Support
+  -----------------------------------------------------------------
+  collective_anomaly            0.8119     0.7021     0.7530       2397
+  contextual_anomaly            1.0000     1.0000     1.0000       2397
+  deterministic_trend           0.9858     0.9858     0.9858       2397
+  mean_shift                    0.8355     0.7839     0.8089       2397
+  point_anomaly                 0.6233     0.8957     0.7351       2398
+  stochastic_trend              0.9640     0.9495     0.9567       2398
+  trend_shift                   0.9417     0.9158     0.9285       2398
+  variance_shift                0.9062     0.7973     0.8483       2398
+  volatility                    0.9177     0.8465     0.8807       2398
+
+----------------------------------------------------------------------
+  CONFUSION MATRIX
+----------------------------------------------------------------------
+  True/Pred       collecti  contextu  determin  mean_shi  point_an  stochast  trend_sh  variance  volatili
+  ----------------------------------------------------------------------------------------------------------
+  collective_ano      1683         0         0       104       508        15         6        35        46
+  contextual_ano         0      2397         0         0         0         0         0         0         0
+  deterministic_         0         0      2363         2         1         4        27         0         0
+  mean_shift           146         0         0      1879       242        34        61        13        22
+  point_anomaly        108         0         0        48      2148         9         6        47        32
+  stochastic_tre         9         0         5        61        16      2277        28         2         0
+  trend_shift           12         0        29        95        43        11      2196         2        10
+  variance_shift        64         0         0        42       288        12         8      1912        72
+  volatility            51         0         0        18       200         0         0        99      2030
+
+  Results saved to: C:\Users\user\Desktop\STATIONARY\tsfresh ensemble\results
+======================================================================

@@ -1,0 +1,220 @@
+LOADING FEATURE NAMES...
+Loaded 777 features.
+
+EXTRACTING IMPORTANCES...
+
+--- collective_anomaly (xgboost) ---
+Feature                                                      Importance
+---------------------------------------------------------------------------
+value__friedrich_coefficients__coeff_2__m_3__r_30                0.0618
+value__agg_linear_trend__attr_"intercept"__chunk_len_10__f_agg_"max"     0.0516
+value__agg_linear_trend__attr_"intercept"__chunk_len_10__f_agg_"mean"     0.0305
+value__spkt_welch_density__coeff_2                               0.0299
+value__fft_coefficient__attr_"abs"__coeff_0                      0.0255
+value__kurtosis                                                  0.0229
+value__linear_trend__attr_"intercept"                            0.0190
+value__autocorrelation__lag_5                                    0.0189
+value__augmented_dickey_fuller__attr_"teststat"__autolag_"AIC"     0.0175
+value__linear_trend__attr_"pvalue"                               0.0161
+value__agg_linear_trend__attr_"intercept"__chunk_len_50__f_agg_"var"     0.0159
+value__augmented_dickey_fuller__attr_"pvalue"__autolag_"AIC"     0.0154
+value__fft_coefficient__attr_"abs"__coeff_6                      0.0152
+value__mean_n_absolute_max__number_of_maxima_7                   0.0146
+value__agg_linear_trend__attr_"intercept"__chunk_len_10__f_agg_"var"     0.0117
+value__absolute_maximum                                          0.0111
+value__binned_entropy__max_bins_10                               0.0108
+value__fft_coefficient__attr_"abs"__coeff_4                      0.0101
+value__agg_autocorrelation__f_agg_"mean"__maxlag_40              0.0088
+value__number_crossing_m__m_0                                    0.0082
+
+--- contextual_anomaly (xgboost) ---
+Feature                                                      Importance
+---------------------------------------------------------------------------
+value__quantile__q_0.9                                           0.5986
+value__variance                                                  0.2149
+value__quantile__q_0.2                                           0.0951
+value__fft_coefficient__attr_"real"__coeff_1                     0.0207
+value__energy_ratio_by_chunks__num_segments_10__segment_focus_4     0.0192
+value__longest_strike_below_mean                                 0.0119
+value__max_langevin_fixed_point__m_3__r_30                       0.0073
+value__energy_ratio_by_chunks__num_segments_10__segment_focus_5     0.0070
+value__agg_autocorrelation__f_agg_"var"__maxlag_40               0.0032
+value__mean                                                      0.0022
+value__quantile__q_0.1                                           0.0021
+value__fft_coefficient__attr_"abs"__coeff_0                      0.0013
+value__index_mass_quantile__q_0.8                                0.0013
+value__quantile__q_0.8                                           0.0012
+value__index_mass_quantile__q_0.2                                0.0012
+value__index_mass_quantile__q_0.3                                0.0012
+value__mean_abs_change                                           0.0011
+value__fft_coefficient__attr_"abs"__coeff_1                      0.0010
+value__energy_ratio_by_chunks__num_segments_10__segment_focus_9     0.0010
+value__index_mass_quantile__q_0.7                                0.0009
+
+--- deterministic_trend (xgboost) ---
+Feature                                                      Importance
+---------------------------------------------------------------------------
+value__autocorrelation__lag_9                                    0.1057
+value__autocorrelation__lag_7                                    0.0651
+value__energy_ratio_by_chunks__num_segments_10__segment_focus_0     0.0634
+value__agg_linear_trend__attr_"rvalue"__chunk_len_5__f_agg_"max"     0.0573
+value__quantile__q_0.9                                           0.0543
+value__index_mass_quantile__q_0.6                                0.0428
+value__energy_ratio_by_chunks__num_segments_10__segment_focus_7     0.0421
+value__friedrich_coefficients__coeff_2__m_3__r_30                0.0357
+value__standard_deviation                                        0.0323
+value__mean_change                                               0.0280
+value__agg_linear_trend__attr_"rvalue"__chunk_len_50__f_agg_"var"     0.0180
+value__quantile__q_0.4                                           0.0179
+value__ar_coefficient__coeff_1__k_10                             0.0177
+value__index_mass_quantile__q_0.1                                0.0171
+value__energy_ratio_by_chunks__num_segments_10__segment_focus_5     0.0149
+value__fft_aggregated__aggtype_"centroid"                        0.0130
+value__sum_values                                                0.0126
+value__quantile__q_0.8                                           0.0123
+value__autocorrelation__lag_8                                    0.0108
+value__energy_ratio_by_chunks__num_segments_10__segment_focus_9     0.0099
+
+--- mean_shift (xgboost) ---
+Feature                                                      Importance
+---------------------------------------------------------------------------
+value__number_crossing_m__m_0                                    0.0952
+value__friedrich_coefficients__coeff_2__m_3__r_30                0.0893
+value__linear_trend__attr_"pvalue"                               0.0616
+value__mean_n_absolute_max__number_of_maxima_7                   0.0484
+value__absolute_maximum                                          0.0241
+value__cid_ce__normalize_True                                    0.0153
+value__fft_coefficient__attr_"abs"__coeff_6                      0.0128
+value__fourier_entropy__bins_10                                  0.0116
+value__fft_aggregated__aggtype_"kurtosis"                        0.0093
+value__kurtosis                                                  0.0078
+value__number_crossing_m__m_-1                                   0.0067
+value__agg_linear_trend__attr_"intercept"__chunk_len_50__f_agg_"var"     0.0063
+value__agg_linear_trend__attr_"intercept"__chunk_len_10__f_agg_"var"     0.0060
+value__change_quantiles__f_agg_"var"__isabs_False__qh_0.8__ql_0.2     0.0049
+value__fourier_entropy__bins_5                                   0.0047
+value__fft_coefficient__attr_"abs"__coeff_5                      0.0047
+value__agg_linear_trend__attr_"stderr"__chunk_len_10__f_agg_"mean"     0.0046
+value__change_quantiles__f_agg_"mean"__isabs_True__qh_0.8__ql_0.0     0.0043
+value__fft_coefficient__attr_"abs"__coeff_7                      0.0041
+value__fft_coefficient__attr_"abs"__coeff_0                      0.0041
+
+--- point_anomaly (lightgbm) ---
+Feature                                                      Importance
+---------------------------------------------------------------------------
+value__absolute_maximum                                        256.0000
+value__agg_autocorrelation__f_agg_"var"__maxlag_40             108.0000
+value__mean                                                     89.0000
+value__agg_autocorrelation__f_agg_"mean"__maxlag_40             76.0000
+value__friedrich_coefficients__coeff_2__m_3__r_30               74.0000
+value__energy_ratio_by_chunks__num_segments_10__segment_focus_0    73.0000
+value__c3__lag_1                                                73.0000
+value__fft_coefficient__attr_"abs"__coeff_1                     70.0000
+value__change_quantiles__f_agg_"var"__isabs_True__qh_1.0__ql_0.0    69.0000
+value__ratio_beyond_r_sigma__r_2                                68.0000
+value__ratio_beyond_r_sigma__r_2.5                              68.0000
+value__agg_linear_trend__attr_"intercept"__chunk_len_50__f_agg_"var"    66.0000
+value__agg_autocorrelation__f_agg_"median"__maxlag_40           66.0000
+value__friedrich_coefficients__coeff_0__m_3__r_30               62.0000
+value__linear_trend__attr_"pvalue"                              61.0000
+value__index_mass_quantile__q_0.1                               60.0000
+value__index_mass_quantile__q_0.9                               60.0000
+value__index_mass_quantile__q_0.2                               59.0000
+value__energy_ratio_by_chunks__num_segments_10__segment_focus_6    57.0000
+value__energy_ratio_by_chunks__num_segments_10__segment_focus_9    57.0000
+
+--- stochastic_trend (xgboost) ---
+Feature                                                      Importance
+---------------------------------------------------------------------------
+value__ar_coefficient__coeff_1__k_10                             0.1871
+value__cid_ce__normalize_False                                   0.1539
+value__longest_strike_above_mean                                 0.0577
+value__change_quantiles__f_agg_"var"__isabs_True__qh_1.0__ql_0.0     0.0421
+value__length                                                    0.0167
+value__abs_energy                                                0.0138
+value__number_peaks__n_50                                        0.0116
+value__autocorrelation__lag_2                                    0.0099
+value__fft_aggregated__aggtype_"variance"                        0.0095
+value__fft_coefficient__attr_"imag"__coeff_90                    0.0077
+value__augmented_dickey_fuller__attr_"usedlag"__autolag_"AIC"     0.0077
+value__agg_autocorrelation__f_agg_"mean"__maxlag_40              0.0074
+value__linear_trend__attr_"intercept"                            0.0070
+value__augmented_dickey_fuller__attr_"pvalue"__autolag_"AIC"     0.0069
+value__augmented_dickey_fuller__attr_"teststat"__autolag_"AIC"     0.0068
+value__spkt_welch_density__coeff_5                               0.0067
+value__autocorrelation__lag_1                                    0.0060
+value__change_quantiles__f_agg_"var"__isabs_False__qh_1.0__ql_0.0     0.0055
+value__change_quantiles__f_agg_"var"__isabs_True__qh_1.0__ql_0.2     0.0052
+value__fft_coefficient__attr_"abs"__coeff_2                      0.0048
+
+--- trend_shift (xgboost) ---
+Feature                                                      Importance
+---------------------------------------------------------------------------
+value__augmented_dickey_fuller__attr_"teststat"__autolag_"AIC"     0.1259
+value__cid_ce__normalize_False                                   0.0557
+value__augmented_dickey_fuller__attr_"pvalue"__autolag_"AIC"     0.0554
+value__mean_n_absolute_max__number_of_maxima_7                   0.0465
+value__absolute_maximum                                          0.0443
+value__change_quantiles__f_agg_"var"__isabs_False__qh_1.0__ql_0.0     0.0378
+value__fourier_entropy__bins_100                                 0.0348
+value__partial_autocorrelation__lag_2                            0.0291
+value__cwt_coefficients__coeff_7__w_10__widths_(2, 5, 10, 20)     0.0197
+value__ar_coefficient__coeff_1__k_10                             0.0152
+value__energy_ratio_by_chunks__num_segments_10__segment_focus_4     0.0145
+value__agg_linear_trend__attr_"stderr"__chunk_len_10__f_agg_"mean"     0.0128
+value__absolute_sum_of_changes                                   0.0123
+value__number_peaks__n_50                                        0.0114
+value__linear_trend__attr_"pvalue"                               0.0107
+value__permutation_entropy__dimension_4__tau_1                   0.0103
+value__energy_ratio_by_chunks__num_segments_10__segment_focus_6     0.0102
+value__fft_coefficient__attr_"abs"__coeff_1                      0.0096
+value__fourier_entropy__bins_5                                   0.0081
+value__energy_ratio_by_chunks__num_segments_10__segment_focus_0     0.0078
+
+--- variance_shift (xgboost) ---
+Feature                                                      Importance
+---------------------------------------------------------------------------
+value__ratio_beyond_r_sigma__r_0.5                               0.1757
+value__large_standard_deviation__r_0.15000000000000002           0.1303
+value__number_crossing_m__m_0                                    0.0669
+value__large_standard_deviation__r_0.2                           0.0378
+value__agg_linear_trend__attr_"rvalue"__chunk_len_5__f_agg_"var"     0.0297
+value__linear_trend__attr_"stderr"                               0.0234
+value__number_crossing_m__m_-1                                   0.0184
+value__number_crossing_m__m_1                                    0.0141
+value__linear_trend__attr_"pvalue"                               0.0121
+value__ratio_beyond_r_sigma__r_6                                 0.0116
+value__fft_coefficient__attr_"abs"__coeff_0                      0.0108
+value__agg_linear_trend__attr_"stderr"__chunk_len_5__f_agg_"mean"     0.0102
+value__quantile__q_0.2                                           0.0100
+value__agg_autocorrelation__f_agg_"median"__maxlag_40            0.0090
+value__fft_coefficient__attr_"abs"__coeff_1                      0.0079
+value__agg_linear_trend__attr_"stderr"__chunk_len_10__f_agg_"mean"     0.0077
+value__linear_trend__attr_"rvalue"                               0.0072
+value__permutation_entropy__dimension_6__tau_1                   0.0072
+value__absolute_sum_of_changes                                   0.0067
+value__agg_linear_trend__attr_"intercept"__chunk_len_50__f_agg_"var"     0.0067
+
+--- volatility (xgboost) ---
+Feature                                                      Importance
+---------------------------------------------------------------------------
+value__ratio_beyond_r_sigma__r_5                                 0.4632
+value__range_count__max_1__min_-1                                0.0876
+value__fourier_entropy__bins_10                                  0.0720
+value__agg_linear_trend__attr_"rvalue"__chunk_len_5__f_agg_"var"     0.0315
+value__change_quantiles__f_agg_"var"__isabs_True__qh_1.0__ql_0.0     0.0203
+value__change_quantiles__f_agg_"var"__isabs_False__qh_0.6__ql_0.0     0.0184
+value__agg_autocorrelation__f_agg_"mean"__maxlag_40              0.0105
+value__autocorrelation__lag_2                                    0.0095
+value__mean_abs_change                                           0.0089
+value__change_quantiles__f_agg_"var"__isabs_False__qh_0.8__ql_0.0     0.0088
+value__change_quantiles__f_agg_"var"__isabs_False__qh_1.0__ql_0.4     0.0074
+value__augmented_dickey_fuller__attr_"usedlag"__autolag_"AIC"     0.0054
+value__abs_energy                                                0.0053
+value__length                                                    0.0048
+value__change_quantiles__f_agg_"var"__isabs_True__qh_1.0__ql_0.4     0.0042
+value__agg_autocorrelation__f_agg_"var"__maxlag_40               0.0036
+value__change_quantiles__f_agg_"var"__isabs_True__qh_0.8__ql_0.0     0.0033
+value__number_peaks__n_50                                        0.0031
+value__change_quantiles__f_agg_"var"__isabs_True__qh_1.0__ql_0.2     0.0031
+value__linear_trend__attr_"pvalue"                               0.0028
