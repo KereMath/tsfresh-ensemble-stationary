@@ -1,0 +1,92 @@
+{
+  "uncertainty_metrics": {
+    "single_label": 19292,
+    "two_labels": 565,
+    "three_plus_labels": 3
+  },
+  "confidence_gap": {
+    "mean": 0.8409801203226581,
+    "median": 0.9978356170304805,
+    "std": 0.2851205512347239
+  },
+  "class_wise_uncertainty": {
+    "collective_anomaly": {
+      "total": 2397,
+      "uncertain": 148,
+      "uncertain_ratio": 0.06174384647476012
+    },
+    "contextual_anomaly": {
+      "total": 2397,
+      "uncertain": 0,
+      "uncertain_ratio": 0.0
+    },
+    "deterministic_trend": {
+      "total": 2397,
+      "uncertain": 16,
+      "uncertain_ratio": 0.006675010429703796
+    },
+    "mean_shift": {
+      "total": 2397,
+      "uncertain": 68,
+      "uncertain_ratio": 0.028368794326241134
+    },
+    "point_anomaly": {
+      "total": 2398,
+      "uncertain": 123,
+      "uncertain_ratio": 0.05129274395329441
+    },
+    "stochastic_trend": {
+      "total": 2398,
+      "uncertain": 9,
+      "uncertain_ratio": 0.0037531276063386154
+    },
+    "trend_shift": {
+      "total": 2398,
+      "uncertain": 39,
+      "uncertain_ratio": 0.01626355296080067
+    },
+    "variance_shift": {
+      "total": 2398,
+      "uncertain": 86,
+      "uncertain_ratio": 0.03586321934945788
+    },
+    "volatility": {
+      "total": 2398,
+      "uncertain": 79,
+      "uncertain_ratio": 0.0329441201000834
+    }
+  },
+  "confused_pairs": {
+    "point_anomaly <-> variance_shift": 66,
+    "mean_shift <-> trend_shift": 45,
+    "collective_anomaly <-> point_anomaly": 213,
+    "mean_shift <-> point_anomaly": 37,
+    "collective_anomaly <-> mean_shift": 33,
+    "point_anomaly <-> stochastic_trend": 3,
+    "variance_shift <-> volatility": 49,
+    "deterministic_trend <-> stochastic_trend": 6,
+    "deterministic_trend <-> trend_shift": 18,
+    "contextual_anomaly <-> deterministic_trend": 1,
+    "point_anomaly <-> trend_shift": 2,
+    "mean_shift <-> variance_shift": 4,
+    "point_anomaly <-> volatility": 55,
+    "stochastic_trend <-> trend_shift": 6,
+    "collective_anomaly <-> variance_shift": 10,
+    "collective_anomaly <-> volatility": 9,
+    "mean_shift <-> stochastic_trend": 4,
+    "mean_shift <-> volatility": 2,
+    "deterministic_trend <-> mean_shift": 1,
+    "collective_anomaly <-> trend_shift": 1
+  },
+  "accuracy_analysis": {
+    "certain_samples": {
+      "total": 19292,
+      "accuracy": 0.9283640887414473
+    },
+    "uncertain_samples": {
+      "total": 568,
+      "primary_accuracy": 0.5616197183098591,
+      "multilabel_hit_rate": 0.903169014084507
+    }
+  }
+}

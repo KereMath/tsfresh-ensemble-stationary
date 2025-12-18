@@ -29,6 +29,19 @@ CLASSES = [
     'volatility'
 ]
 
+# Folder mapping (handle case differences in source)
+CLASS_FOLDERS = {
+    'collective_anomaly': 'collective_anomaly',
+    'contextual_anomaly': 'contextual_anomaly',
+    'deterministic_trend': 'deterministic_trend',
+    'mean_shift': 'mean_shift',
+    'point_anomaly': 'point_anomaly',
+    'stochastic_trend': 'Stochastic Trend',
+    'trend_shift': 'trend_shift',
+    'variance_shift': 'variance_shift',
+    'volatility': 'Volatility'
+}
+
 # Class index mapping (matching source data)
 CLASS_INDEX_MAP = {
     'collective_anomaly': 0,
@@ -41,6 +54,9 @@ CLASS_INDEX_MAP = {
     'variance_shift': 7,
     'volatility': 8  # Note: source uses 'Volatility'
 }
+
+# Data sampling
+SAMPLES_PER_CLASS = 2400  # Equal sampling per class
 
 # Model Training Settings
 RANDOM_STATE = 42
