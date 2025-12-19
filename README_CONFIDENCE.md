@@ -118,11 +118,13 @@ Top 3:
 
 | Kategori | Sample Sayısı | Yüzde |
 |----------|---------------|-------|
+| **0 labels** (Hiçbiri >0.5) | 1,718 | **8.0%** |
 | **1 label** (Kesin karar) | 19,292 | **89.4%** |
 | **2 labels** (İkili kararsızlık) | 565 | 2.6% |
 | **3+ labels** (Çoklu kararsızlık) | 3 | 0.0% |
+| **TOPLAM** | **21,578** | **100.0%** |
 
-> **Yorum**: Model %90'dan fazla sample'da kesin karar veriyor. Sadece %2.6'sında iki sınıf arası kararsız.
+> **Yorum**: Model %89.4 oranında kesin karar veriyor (1 label). %8'inde hiçbir sınıf threshold'u geçemiyor (çok belirsiz). Sadece %2.6'sında iki sınıf arası kararsız.
 
 ### Multi-Label Hit Rate
 
