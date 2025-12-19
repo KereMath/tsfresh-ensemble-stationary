@@ -1,8 +1,10 @@
 {
   "uncertainty_metrics": {
+    "zero_labels": 1718,
     "single_label": 19292,
     "two_labels": 565,
-    "three_plus_labels": 3
+    "three_plus_labels": 3,
+    "total": 21578
   },
   "confidence_gap": {
     "mean": 0.8409801203226581,

@@ -39,12 +39,16 @@ def analyze_uncertain_samples():
     # 1. Multi-label counts
     multi_label_counts = [len(p['multi_label']) for p in predictions]
 
+    zero_label = sum(1 for c in multi_label_counts if c == 0)
+    single_label = sum(1 for c in multi_label_counts if c == 1)
     uncertain_2 = [p for p in predictions if len(p['multi_label']) == 2]
     uncertain_3plus = [p for p in predictions if len(p['multi_label']) >= 3]
 
-    print(f"\n  Single label (certain): {sum(1 for c in multi_label_counts if c == 1)} ({100*sum(1 for c in multi_label_counts if c == 1)/len(predictions):.1f}%)")
+    print(f"\n  Zero labels (no conf > 0.5): {zero_label} ({100*zero_label/len(predictions):.1f}%)")
+    print(f"  Single label (certain): {single_label} ({100*single_label/len(predictions):.1f}%)")
     print(f"  Two labels (uncertain): {len(uncertain_2)} ({100*len(uncertain_2)/len(predictions):.1f}%)")
     print(f"  Three+ labels (highly uncertain): {len(uncertain_3plus)} ({100*len(uncertain_3plus)/len(predictions):.1f}%)")
+    print(f"  TOTAL: {zero_label + single_label + len(uncertain_2) + len(uncertain_3plus)} (should be {len(predictions)})")
 
     # 2. Confidence gap analysis
     print("\n" + "-" * 70)
@@ -165,9 +169,11 @@ def analyze_uncertain_samples():
     # ========== SAVE RESULTS ==========
     results = {
         'uncertainty_metrics': {
-            'single_label': sum(1 for c in multi_label_counts if c == 1),
+            'zero_labels': zero_label,
+            'single_label': single_label,
             'two_labels': len(uncertain_2),
-            'three_plus_labels': len(uncertain_3plus)
+            'three_plus_labels': len(uncertain_3plus),
+            'total': len(predictions)
         },
         'confidence_gap': {
             'mean': float(np.mean(confidence_gaps)),

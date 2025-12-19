@@ -25,13 +25,18 @@ Bir modelin yanlış tahmin yapması iki farklı şekilde olabilir:
 Threshold (varsayılan: 0.5) üzerindeki confidence'lara sahip tüm sınıflar sayılır:
 
 ```python
-# Örnek: point_anomaly: 0.72, collective_anomaly: 0.52
-# -> Multi-label = 2 (belirsiz)
+# Örnek 1: point_anomaly: 0.72, collective_anomaly: 0.52 -> Multi-label = 2 (belirsiz)
+# Örnek 2: point_anomaly: 0.42, collective_anomaly: 0.38 -> Multi-label = 0 (hiçbiri yeterince yüksek değil)
+# Örnek 3: point_anomaly: 0.92 -> Multi-label = 1 (kesin karar)
 
-single_label = 19,292 sample (89.4%)  # Kesin karar
+zero_labels = 1,718 sample (8.0%)      # Hiçbir sınıf threshold'u geçmemiş
+single_label = 19,292 sample (89.4%)   # Kesin karar
 two_labels = 565 sample (2.6%)         # İkili kararsızlık
 three+ labels = 3 sample (0.0%)        # Çoklu kararsızlık
+TOTAL = 21,578 sample (100%)
 ```
+
+**Önemli**: %8 oranında sample'da **hiçbir sınıf %50 threshold'unu geçemiyor**! Bu sample'lar için model çok belirsiz.
 
 ### 2. Confidence Gap Analysis
 
@@ -210,7 +215,9 @@ if predicted in ['collective_anomaly', 'point_anomaly']:
 
 | Metrik | Değer |
 |--------|-------|
-| **Belirsiz Sample Oranı** | %10.6 (2+ label) |
+| **Zero Label Oranı** | **8.0%** (hiçbir sınıf >0.5) |
+| **Kesin Karar Oranı** | **89.4%** (single label) |
+| **Belirsiz Sample Oranı** | **2.6%** (2+ label) |
 | **Kesin Sample Accuracy** | **92.84%** |
 | **Belirsiz Sample Accuracy** | **56.16%** |
 | **Multi-Label Hit Rate** | **90.32%** |
@@ -238,11 +245,13 @@ python uncertain_analysis.py
 
 ## 🎯 Ana Mesajlar
 
-1. **Model %89 oranında kesin karar veriyor** (single label)
-2. **Kesin kararlarda %93 doğruluk** var
-3. **Belirsiz kararlarda primary %56 doğru**, ama **multi-label %90 doğru cevabı içeriyor**
-4. **collective_anomaly ↔ point_anomaly** en çok karıştırılan çift (213 kez)
-5. **contextual_anomaly** hiç belirsizlik göstermiyor (%100 kesin)
+1. **%8 sample'da hiçbir sınıf threshold geçemiyor** (zero label) - çok belirsiz durumlar
+2. **Model %89 oranında kesin karar veriyor** (single label)
+3. **Sadece %2.6 sample'da iki sınıf arası kararsızlık** var (2+ label)
+4. **Kesin kararlarda %93 doğruluk** var
+5. **Belirsiz kararlarda primary %56 doğru**, ama **multi-label %90 doğru cevabı içeriyor**
+6. **collective_anomaly ↔ point_anomaly** en çok karıştırılan çift (213 kez)
+7. **contextual_anomaly** hiç belirsizlik göstermiyor (%100 kesin)
 
 **Pratik Öneri**:
 > Confidence gap < 0.2 olan sample'larda **multi-label prediction** kullanılarak %90 başarı elde edilebilir!
