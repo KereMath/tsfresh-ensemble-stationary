@@ -60,6 +60,18 @@ gap = top1_confidence - top2_confidence
 
 Her sınıf için belirsizlik oranı hesaplanır:
 
+```python
+# Bir sınıf için belirsizlik oranı nasıl hesaplanır?
+class_preds = [p for p in predictions if p['true_class'] == class_name]
+uncertain_preds = [p for p in class_preds if len(p['multi_label']) >= 2]
+
+uncertain_ratio = len(uncertain_preds) / len(class_preds)
+```
+
+**Tanım**:
+- **Belirsiz sample**: `multi_label >= 2` (iki veya daha fazla sınıf confidence > 0.5)
+- **Belirsizlik oranı**: O sınıfa ait belirsiz sample'ların yüzdesi
+
 | Sınıf | Toplam Sample | Belirsiz Sample | Belirsizlik Oranı |
 |-------|--------------|-----------------|------------------|
 | **collective_anomaly** | 2,397 | 148 | **6.2%** |
