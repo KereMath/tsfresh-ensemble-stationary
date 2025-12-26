@@ -1,0 +1,2 @@
+# Exclude visual_model subdirectory (has its own repository)
+visual_model/
